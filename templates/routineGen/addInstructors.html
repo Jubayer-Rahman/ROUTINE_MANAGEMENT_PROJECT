@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %} Add Instructor {% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-4">
+        <h3 class="text-center">Add Instructors</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-outline-success" type="submit" value="ADD">
+        </form>
+    </div>
+    <div class="col-sm-7 offset-1">
+        <div class="row">
+            <div class="col-sm-9">
+                <h3 class="text-center">Instructor List</h3>
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-success btn-lg" href="{% url 'addRooms' %}" role="button">Next Step</a>
+            </div>
+        </div>
+        {% if instructors %}
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ins in instructors %}
+                    <tr>
+                        <th scope="row">{{ins.instructor_id}}</th>
+                        <td scope="row">{{ins.name}}</td>
+                        <td scope="row">
+                            <a class="btn btn-outline-warning btn-sm" href="{% url 'editInstructors' ins.instructor_id %}" role="button">Edit</a>
+                            <form action="{% url 'deleteInstructors' ins.instructor_id %}" method="POST" class="d-inline">
+                                {% csrf_token %}
+                                <input class="btn btn-outline-danger btn-sm" type="submit" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <h5>Please add instructor first</h5>
+        {% endif %}
+    </div>
+</div>
+
+<!-- <a class="btn btn-outline-success btn-lg" href="#" role="button">Get Start</a> -->
+
+{% endblock %}

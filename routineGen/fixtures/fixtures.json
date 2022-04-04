@@ -1,0 +1,182 @@
+[
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT1",
+            "meeting_day" : "Saturday",
+            "meeting_start_time" : "09:01",
+            "meeting_end_time" : "10:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT2",
+            "meeting_day" : "Saturday",
+            "meeting_start_time" : "10:01",
+            "meeting_end_time" : "11:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT3",
+            "meeting_day" : "Saturday",
+            "meeting_start_time" : "11:01",
+            "meeting_end_time" : "12:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT4",
+            "meeting_day" : "Saturday",
+            "meeting_start_time" : "12:01",
+            "meeting_end_time" : "13:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT8",
+            "meeting_day" : "Sunday",
+            "meeting_start_time" : "09:01",
+            "meeting_end_time" : "10:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT9",
+            "meeting_day" : "Sunday",
+            "meeting_start_time" : "10:01",
+            "meeting_end_time" : "11:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT10",
+            "meeting_day" : "Sunday",
+            "meeting_start_time" : "11:01",
+            "meeting_end_time" : "12:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT11",
+            "meeting_day" : "Sunday",
+            "meeting_start_time" : "12:01",
+            "meeting_end_time" : "13:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT15",
+            "meeting_day" : "Monday",
+            "meeting_start_time" : "09:01",
+            "meeting_end_time" : "10:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT16",
+            "meeting_day" : "Monday",
+            "meeting_start_time" : "10:01",
+            "meeting_end_time" : "11:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT17",
+            "meeting_day" : "Monday",
+            "meeting_start_time" : "11:01",
+            "meeting_end_time" : "12:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT18",
+            "meeting_day" : "Monday",
+            "meeting_start_time" : "12:01",
+            "meeting_end_time" : "13:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT22",
+            "meeting_day" : "Tuesday",
+            "meeting_start_time" : "09:01",
+            "meeting_end_time" : "10:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT23",
+            "meeting_day" : "Tuesday",
+            "meeting_start_time" : "10:01",
+            "meeting_end_time" : "11:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT24",
+            "meeting_day" : "Tuesday",
+            "meeting_start_time" : "11:01",
+            "meeting_end_time" : "12:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT25",
+            "meeting_day" : "Tuesday",
+            "meeting_start_time" : "12:01",
+            "meeting_end_time" : "13:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT29",
+            "meeting_day" : "Wednesday",
+            "meeting_start_time" : "09:01",
+            "meeting_end_time" : "10:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT30",
+            "meeting_day" : "Wednesday",
+            "meeting_start_time" : "10:01",
+            "meeting_end_time" : "11:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT31",
+            "meeting_day" : "Wednesday",
+            "meeting_start_time" : "11:01",
+            "meeting_end_time" : "12:00"
+        }
+    },
+    {
+        "model" : "routineGen.MeetingTime",
+        "fields" : {
+            "meeting_id" : "MT32",
+            "meeting_day" : "Wednesday",
+            "meeting_start_time" : "12:01",
+            "meeting_end_time" : "13:00"
+        }
+    }
+]

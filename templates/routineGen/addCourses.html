@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %} Add Course {% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-3">
+        <h3 class="text-center">Add Courses</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-outline-success" type="submit" value="ADD">
+        </form>
+    </div>
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="col-sm-9">
+                <h3 class="text-center">Course List</h3>
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-success btn-lg" href="{% url 'routine' %}" role="button">Generate Routine</a>
+            </div>
+        </div>
+        {% if courses %}
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Code</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Student</th>
+                        <th scope="col">Instructor</th>
+                        <th scope="col">Credit</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in courses %}
+                    <tr>
+                        <th scope="row">{{course.code}}</th>
+                        <td scope="row">{{course.name}}</td>
+                        <td scope="row">{{course.numb_of_students}}</td>
+                        <td scope="row">{{course.instructor}}</td>
+                        <td scope="row">{{course.credit}}</td>
+                        <td scope="row">
+                            <a class="btn btn-outline-warning btn-sm" href="{% url 'editCourses' course.code %}" role="button">Edit</a>
+                            <form action="{% url 'deleteCourses' course.code %}" method="POST" class="d-inline">
+                                {% csrf_token %}
+                                <input class="btn btn-outline-danger btn-sm" type="submit" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <h5>Please add course first</h5>
+        {% endif %}
+    </div>
+</div>
+
+<!-- <a class="btn btn-outline-success btn-lg" href="#" role="button">Get Start</a> -->
+
+{% endblock %}

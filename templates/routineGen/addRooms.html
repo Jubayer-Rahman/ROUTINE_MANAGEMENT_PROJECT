@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %} Add Room {% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-4">
+        <h3 class="text-center">Add Rooms</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-outline-success" type="submit" value="ADD">
+        </form>
+    </div>
+    <div class="col-sm-7 offset-1">
+        <div class="row">
+            <div class="col-sm-9">
+                <h3 class="text-center">Room List</h3>
+            </div>
+            <div class="col-sm-3">
+                <a class="btn btn-success btn-lg" href="{% url 'addCourses' %}" role="button">Next Step</a>
+            </div>
+        </div>
+        {% if rooms %}
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">Seating Capacity</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for room in rooms %}
+                    <tr>
+                        <th scope="row">{{room.number}}</th>
+                        <td scope="row">{{room.seating_capacity}}</td>
+                        <td scope="row">
+                            <a class="btn btn-outline-warning btn-sm" href="{% url 'editRooms' room.number %}" role="button">Edit</a>
+                            <form action="{% url 'deleteRooms' room.number %}" method="POST" class="d-inline">
+                                {% csrf_token %}
+                                <input class="btn btn-outline-danger btn-sm" type="submit" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <h5>Please add room first</h5>
+        {% endif %}
+    </div>
+</div>
+
+<!-- <a class="btn btn-outline-success btn-lg" href="#" role="button">Get Start</a> -->
+
+{% endblock %}
